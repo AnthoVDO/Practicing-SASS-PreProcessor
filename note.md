@@ -8,6 +8,7 @@
 4) Open the terminal
 5) creat Sass folder
 6) creat style.scss inside the created folder
+NOTE: I installed the file here but it's possible to install it on the computer and have access for all the projects. I just did it for this repo
 
 ## Checking the command with help
 
