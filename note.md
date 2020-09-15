@@ -22,9 +22,20 @@ of course, don't forget to used the good path for exemple, I have:
 
 This command creat a style.css file and a style.css.map.
 
-## ignore file
+## Ignore file
 
 Don't forget to creat a git ignore file to ascape style.css.map file on github for exemple.
 Here, I keep it for the note purpose
 
-##
+## Automatic update
+
+To Avoid to spend you time to used the terminal to see the change inside the style.css file, you can add the flag --watch
+For exemple:
+./dart-sass/dart-sass/sass sass/style.scss style.css --watch
+If it's correctly done, you will see this message inside the terminal while saving your change : Compiled sass\style.scss to style.css.
+It also show you your mistake !
+
+## Map use
+
+Map file is used to see the element inside the original SCSS file in a browser and not the compiled file.
+It's easier to change the code in the futur because we can directly find the line inside the SCSS file because, normaly, this is the style.css which is related to the index.html file.
