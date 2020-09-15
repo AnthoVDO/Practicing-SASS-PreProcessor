@@ -39,3 +39,17 @@ It also show you your mistake !
 
 Map file is used to see the element inside the original SCSS file in a browser and not the compiled file.
 It's easier to change the code in the futur because we can directly find the line inside the SCSS file because, normaly, this is the style.css which is related to the index.html file.
+
+## Import file 
+
+SaSS is used to import easily file to avoid having too much line code.
+For exemple, you would like to use the minireset lib but you want to avoid too much extra line code.
+1) creat a sub folder named libs
+2) go to https://jgthms.com/minireset.css/  and click on download.
+3) copy the Css code 
+4) past the Css code inside a new file that you creat inside the subfolder named libs. Let say reset.scss
+5) go to style.scss and import before body the libs: @import "libs/reset.scss";
+
+Now, you only have on line code
+
+
