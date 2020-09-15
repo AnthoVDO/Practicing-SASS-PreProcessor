@@ -97,3 +97,38 @@ For more info, don't forget that there is a documentation on the website
 
 
 
+## Extend
+
+Sometimes, we have some css for some class that we would like to reuse for other elements.
+To do so, we can use the extend methode.
+exemple:
+
+.btn {
+    color:red;
+}
+
+call-to-action {
+    @extend .btn;
+}
+
+it will give something like this:
+
+.btn, call-to-action {
+    color:red;
+}
+
+This methode is usefull while we are using the padding, margin, ...
+
+## False selector
+
+This is a selector starting with % and which won't be inside the CSS style sheet.
+It's used to make general parameter.
+Exemple: %btn {}
+then we can use the extend method to add to the SCSS.
+exemple:
+.btn{
+    @extend %btn; /* .btn will get %btn parameter*/
+}
+This methode is used to make cleaner code. Of course, we can use the normal methode where we set the .btn and then .btn-danger.
+
+NOTE: Do not abuse with this selector because it add weight to the file

@@ -1,6 +1,8 @@
 @import "libs/reset.scss";
 body {
-    background: #000;
+    background: #fff;
+    padding: 20px;
+    font-family: sans-serif;
 }
 
 p {
@@ -26,4 +28,58 @@ p {
     .green-theme & {
         background-color: darkblue;
     }
+}
+
+.call-to-action {
+    @extend .btn;
+}
+
+p {
+    color: #CCC;
+}
+
+%btn {
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 5px 12px;
+}
+
+.btn2 {
+    @extend %btn;
+    background-color: rgb(28, 255, 255);
+    color: #fcf8f9;
+    &:hover {
+        background-color: rgb(58, 148, 148);
+    }
+}
+
+.btn-danger {
+    @extend .btn2;
+    background-color: red;
+    &:hover {
+        background-color: rgb(145, 1, 1);
+    }
+}
+
+%shadow {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    @extend %shadow;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.card-actions {
+    display: flex;
+}
+
+.card-action {
+    @extend .btn2;
+}
+
+.card-cancel {
+    @extend .btn-danger;
+    @extend %shadow;
 }
