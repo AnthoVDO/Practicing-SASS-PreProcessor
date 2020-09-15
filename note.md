@@ -53,4 +53,47 @@ For exemple, you would like to use the minireset lib but you want to avoid too m
 
 Now, you only have on line code
 
+## Nesting element 
+
+With SaSS, we can nest element inside each other.
+For exemple instead of making a line with 
+h1 {
+    color:red;
+    } 
+and then 
+h1 a {color: green;}
+, we can do 
+h1{
+    color:red; 
+a{
+    color:green;
+    }
+}
+
+if we want to use a selector just after like :hover, we need to use a & to notifie it.
+Exemple: 
+.btn {
+    background-color: blue;
+    &:hover{
+        background-color: red;
+    }
+}
+
+we can also nest to have multiple component condition
+
+exemple:
+
+.btn {
+    background-color: blue;
+
+    .green-theme & {
+        background-color: darkblue; /*Here, it's like we did .green-theme .btn {background-color: darkblue;}*/
+    }
+}
+
+It's also possible to use the media query inside but it's better to use an other preprocessor for the media query
+
+For more info, don't forget that there is a documentation on the website
+
+
 

@@ -86,4 +86,29 @@ body {
   background: #000;
 }
 
+p {
+  margin: 1rem;
+}
+
+.table {
+  width: 100%;
+}
+.table td {
+  border: solid 1px #CCC;
+}
+.table thead {
+  background: #000;
+  color: #fff;
+}
+
+.btn {
+  background-color: blue;
+}
+.btn:hover {
+  background-color: red;
+}
+.green-theme .btn {
+  background-color: darkblue;
+}
+
 /*# sourceMappingURL=style.css.map */
