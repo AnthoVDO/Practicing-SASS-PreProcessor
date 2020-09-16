@@ -1,4 +1,8 @@
 @import "libs/reset.scss";
+@import "libs/responsive.scss";
+@import "libs/functions.scss";
+$primary: rgb(105, 143, 214);
+$padding: 20;
 body {
     background: #fff;
     padding: 20px;
@@ -21,7 +25,7 @@ p {
 }
 
 .btn {
-    background-color: blue;
+    background-color: $primary;
     &:hover {
         background-color: red;
     }
@@ -46,10 +50,10 @@ p {
 
 .btn2 {
     @extend %btn;
-    background-color: rgb(28, 255, 255);
+    background-color: blue;
     color: #fcf8f9;
     &:hover {
-        background-color: rgb(58, 148, 148);
+        background-color: darken(blue, 20);
     }
 }
 
@@ -57,7 +61,7 @@ p {
     @extend .btn2;
     background-color: red;
     &:hover {
-        background-color: rgb(145, 1, 1);
+        background-color: darken(red, 20);
     }
 }
 
@@ -67,7 +71,7 @@ p {
 
 .card {
     @extend %shadow;
-    padding: 10px;
+    padding: $padding;
     border-radius: 3px;
 }
 
@@ -82,4 +86,10 @@ p {
 .card-cancel {
     @extend .btn-danger;
     @extend %shadow;
+}
+
+@media #{$medium-up} {
+    .btn2 {
+        width: 100%;
+    }
 }

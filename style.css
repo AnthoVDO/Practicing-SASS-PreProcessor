@@ -104,7 +104,7 @@ p {
 }
 
 .btn, .call-to-action {
-  background-color: blue;
+  background-color: #698fd6;
 }
 .btn:hover, .call-to-action:hover {
   background-color: red;
@@ -124,18 +124,18 @@ p {
 }
 
 .btn2, .card-action, .btn-danger, .card-cancel {
-  background-color: #1cffff;
+  background-color: blue;
   color: #fcf8f9;
 }
 .btn2:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
-  background-color: #3a9494;
+  background-color: #000099;
 }
 
 .btn-danger, .card-cancel {
   background-color: red;
 }
 .btn-danger:hover, .card-cancel:hover {
-  background-color: #910101;
+  background-color: #990000;
 }
 
 .card-cancel, .card {
@@ -143,12 +143,18 @@ p {
 }
 
 .card {
-  padding: 10px;
+  padding: 20;
   border-radius: 3px;
 }
 
 .card-actions {
   display: flex;
+}
+
+@media (min-width: 768px) {
+  .btn2, .btn-danger, .card-action, .card-cancel {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
